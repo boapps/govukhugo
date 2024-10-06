@@ -1,78 +1,16 @@
-<footer class="govuk-footer " role="contentinfo">
-    <div class="govuk-width-container ">
-        <div class="govuk-footer__meta">
-            <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+<footer class="govuk-footer" role="contentinfo">
+    <div class="govuk-width-container">
+        <p>
+            {{ .Site.Copyright }}
+        </p>
 
-                <h2 class="govuk-visually-hidden">Support links</h2>
-                <ul class="govuk-footer__inline-list">
+        <p lang="en">
+            Built using <a class="govuk-footer__link" href="https://gohugo.io/">hugo</a> with a <a class="govuk-footer__link" href="https://github.com/boapps/govukhugo">custom theme</a> based on <a class="govuk-footer__link" href="https://github.com/co-analysis/govukhugo">govukhugo</a>.
+        </p>
 
-                    {{ $currPage := . }}
-
-                    {{ with .Site.Params.help }}
-                    <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
-                            Help
-                        </a>
-                    </li>
-                    {{ end }}
-                    {{ with .Site.Params.accessibility }}
-                    <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
-                            Accessibility
-                        </a>
-                    </li>
-                    {{ end }}
-                    {{ with .Site.Params.privacy }}
-                    <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
-                            Privacy
-                        </a>
-                    </li>
-                    {{ end }}
-                    {{ with .Site.Params.cookies }}
-                    <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
-                            Cookies
-                        </a>
-                    </li>
-                    {{ end }}
-                    {{ with .Site.Params.contact }}
-                    <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
-                            Contact
-                        </a>
-                    </li>
-                    {{ end }}
-                    {{ with .Site.Params.terms }}
-                    <li class="govuk-footer__inline-list-item">
-                        <a class="govuk-footer__link" href="{{ relref  $currPage . }}">
-                            Terms
-                        </a>
-                    </li>
-                    {{ end }}
-                    {{ with .Site.Params.builtby }}
-                    <li class="govuk-footer__inline-list-item">
-                        Built by <a class="govuk-footer__link" href="{{ $.Site.Params.builtbyurl }}">
-                            {{ . }}
-                        </a>
-                    </li>
-                    {{ end }}
-
-                </ul>
-
-                <span class="govuk-footer__licence-description">
-                    {{ .Site.Copyright }}
-                </span>
-
-                <p lang="en">
-                    Built using <a class="govuk-footer__link" href="https://gohugo.io/">hugo</a> with a <a class="govuk-footer__link" href="https://github.com/boapps/govukhugo">custom theme</a> based on <a class="govuk-footer__link" href="https://github.com/co-analysis/govukhugo">govukhugo</a>.
-                </p>
-
-                <p>
-                    <a class="govuk-footer__link" href="/index.xml">rss</a>
-                </p>
-            </div>
-        </div>
+        <p>
+            <a class="govuk-footer__link" href="/index.xml">rss</a>
+        </p>
     </div>
 </footer>
 
